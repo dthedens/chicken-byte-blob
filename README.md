@@ -8,11 +8,11 @@ Routines for manipulating byte vectors encoded as blobs.
 
 <procedure>(byte-blob? X) => BOOL</procedure>
 
-Returns {{#t}} if the given object is a byte-blob, {{#f}} otherwise.
+Returns `#t` if the given object is a byte-blob, `#f` otherwise.
 
 <procedure>(byte-blob-empty? BYTE-BLOB) => BOOL</procedure>
 
-Returns {{#t}} if the given byte-blob is empty, {{#f}} otherwise.
+Returns `#t` if the given byte-blob is empty, `#f` otherwise.
 
 ### Constructors
 
@@ -22,7 +22,7 @@ Returns an empty byte-blob.
 
 <procedure>(byte-blob-replicate N V) => BYTE-BLOB</procedure>
 
-Returns a byte-blob of length {{N}}, where each element is {{V}}.
+Returns a byte-blob of length `N`, where each element is `V`.
 
 <procedure>(byte-blob-cons X BYTE-BLOB) => BYTE-BLOB</procedure>
 
@@ -35,11 +35,11 @@ Returns a byte-blob containing the elements of the given blob.
 
 <procedure>(list->byte-blob LIST) => BYTE-BLOB</procedure>
 
-Returns a byte-blob containing the elements of {{LIST}}.
+Returns a byte-blob containing the elements of `LIST`.
 
 <procedure>(string->byte-blob STRING) => BYTE-BLOB</procedure>
 
-Returns a byte-blob containing the elements of {{STRING}}.
+Returns a byte-blob containing the elements of `STRING`.
 
 ### Accessors
 
@@ -70,11 +70,11 @@ Returns the i-th element of the given byte-blob as an unsigned byte.
 
 <procedure>(byte-blob-set! BYTE-BLOB I V) => VOID</procedure>
 
-Sets the i-th element of the given byte-blob to the signed byte {{V}}.
+Sets the i-th element of the given byte-blob to the signed byte `V`.
 
 <procedure>(byte-blob-uset! BYTE-BLOB I V) => VOID</procedure>
 
-Sets the i-th element of the given byte-blob to the unsigned byte {{V}}.
+Sets the i-th element of the given byte-blob to the unsigned byte `V`.
 
 <procedure>(byte-blob-append BYTE-BLOB BYTE-BLOB) => BYTE-BLOB </procedure>
 
@@ -92,7 +92,7 @@ the given byte-blob.
 
 <procedure>(byte-blob-map F BYTE-BLOB) => BYTE-BLOB</procedure>
 
-Returns a byte-blob obtained by applying {{F}} to each element of the
+Returns a byte-blob obtained by applying `F` to each element of the
 given byte-blob.
 
 <procedure>(byte-blob->blob BYTE-BLOB) => BLOB</procedure>
@@ -102,7 +102,7 @@ Returns the underlying Scheme blob object.
 <procedure>(byte-blob->list BYTE-BLOB [F]) => LIST</procedure>
 
 Returns a list containing the elements of the given byte-blob. If
-procedure {{F}} is provided as a second argument, it is applied to
+procedure `F` is provided as a second argument, it is applied to
 every element of the returned list.
 
 <procedure>(byte-blob->string BYTE-BLOB) => STRING</procedure>
@@ -113,16 +113,16 @@ Returns a string containing the elements of the given byte-blob.
 
 <procedure>(byte-blob-take BYTE-BLOB N) => BYTE-BLOB</procedure>
 
-Returns the prefix of the given byte-blob of length {{N}}. 
+Returns the prefix of the given byte-blob of length `N`. 
 
 <procedure>(byte-blob-drop BYTE-BLOB N) => BYTE-BLOB</procedure>
 
-Returns the suffix of the given byte-blob after the first {{N}} elements. 
+Returns the suffix of the given byte-blob after the first `N` elements. 
 
 <procedure>(byte-blob-span BYTE-BLOB START END) => BYTE-BLOB</procedure>
 
-Returns the subsequence of the give byte-blob from position {{START}}
-to position {{END}}.
+Returns the subsequence of the give byte-blob from position `START`
+to position `END`.
 
 ### Fold
 
@@ -137,9 +137,9 @@ right, or right to left, respectively.
 
 <procedure>(byte-blob-find NEEDLE HAYSTACK) => LIST</procedure>
 
-Finds all non-overlapping instances of the byte-blob {{NEEDLE}} in the
-byte-blob {{HAYSTACK}}. The first element of the returned list is the
-prefix of {{HAYSTACK}} prior to any matches of {{NEEDLE}}.  The second
+Finds all non-overlapping instances of the byte-blob `NEEDLE` in the
+byte-blob `HAYSTACK`. The first element of the returned list is the
+prefix of `HAYSTACK` prior to any matches of `NEEDLE`.  The second
 is a list of lists.
 
 The first element of each pair in the list is a span from the
@@ -154,12 +154,12 @@ input.
 
 Returns a byte-blob with the contents of the given file.
 
-{{MODE}} is an optional argument that can be one of {{#:text}} or
-{{#:binary}} to specify text or binary mode on Windows.
+`MODE` is an optional argument that can be one of `#:text` or
+`#:binary` to specify text or binary mode on Windows.
 
 <procedure>(byte-blob-read PORT N) => BYTE-BLOB</procedure>
 
-Reads a byte-blob of length {{N}} from the given port.
+Reads a byte-blob of length `N` from the given port.
 
 <procedure>(byte-blob-write PORT BYTE-BLOB) => UNDEFINED</procedure>
 
@@ -191,7 +191,7 @@ Writes the given byte-blob to the given port.
 > Based on ideas from the Haskell
 > [[http://www.cse.unsw.edu.au/~dons/fps.html|bytestring]] library.  
 > 
-> The code for {{byte-blob-find}} is based on code from the Haskell Text
+> The code for `byte-blob-find` is based on code from the Haskell Text
 > library by Tom Harper and Bryan O'Sullivan.
 > 
 >  Copyright 2009-2015 Ivan Raikov
