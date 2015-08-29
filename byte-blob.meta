@@ -1,0 +1,27 @@
+;; -*- Hen -*-
+
+((egg "byte-blob.egg") ; This should never change
+
+ ; List here all the files that should be bundled as part of your egg.  
+
+ (files "byte-blob.setup" "byte-blob.meta" "byte-blob.scm" "tests")
+
+ ; Your egg's license:
+
+ (license "LGPL-3")
+
+ ; Pick one from the list of categories (see below) for your egg and
+ ; enter it here.
+
+ (category data)
+
+ ; A list of eggs byte-blob depends on.
+
+ (needs )
+
+ (test-depends test)
+
+ (author "Ivan Raikov")
+
+ (synopsis "Byte array utility procedures for blobs."))
+
