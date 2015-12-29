@@ -1,6 +1,8 @@
 # byte-blob
 
-Routines for manipulating byte vectors encoded as blobs. 
+{{byte-blob}} aims to provide a SRFI-1-inspired API for manipulating
+byte vectors encoded as blobs. In addition it borrows inspiration from
+the Haskell bytestring library (http://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
 
 ## Library Procedures
 
@@ -159,11 +161,15 @@ Returns a byte-blob with the contents of the given file.
 
 <procedure>(byte-blob-read PORT N) => BYTE-BLOB</procedure>
 
-Reads a byte-blob of length `N` from the given port.
+Reads a byte-blob of length `N` from the given port.  Currently, the
+port must support the `port->fileno` procedure, which means that
+string ports are not supported.
 
 <procedure>(byte-blob-write PORT BYTE-BLOB) => UNDEFINED</procedure>
 
-Writes the given byte-blob to the given port.
+Writes the given byte-blob to the given port. Currently, the
+port must support the `port->fileno` procedure, which means that
+string ports are not supported.
 
 ### SRFI-4 transformers
 
