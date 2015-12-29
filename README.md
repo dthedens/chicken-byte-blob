@@ -163,13 +163,16 @@ Returns a byte-blob with the contents of the given file.
 
 Reads a byte-blob of length `N` from the given port.  Currently, the
 port must support the `port->fileno` procedure, which means that
-string ports are not supported.
+string ports are not supported (in that particular case, procedure
+{{string->byte-blob}} can be used for converting strings to byte blobs).
 
 <procedure>(byte-blob-write PORT BYTE-BLOB) => UNDEFINED</procedure>
 
-Writes the given byte-blob to the given port. Currently, the
-port must support the `port->fileno` procedure, which means that
-string ports are not supported.
+Writes the given byte-blob to the given port. Currently, the port must
+support the `port->fileno` procedure, which means that string ports
+are not supported (in that particular case, procedure
+{{string->byte-blob}} can be used for converting strings to byte
+blobs).
 
 ### SRFI-4 transformers
 
