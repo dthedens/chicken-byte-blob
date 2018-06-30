@@ -203,7 +203,7 @@ blobs).
 > The code for `byte-blob-find` is based on code from the Haskell Text
 > library by Tom Harper and Bryan O'Sullivan.
 > 
->  Copyright 2009-2015 Ivan Raikov
+>  Copyright 2009-2018 Ivan Raikov
 >
 >
 >  This program is free software: you can redistribute it and/or modify
