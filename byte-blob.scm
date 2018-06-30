@@ -1,7 +1,7 @@
 ;;
 ;;  Utility procedures for manipulating blobs as byte sequences.
 ;;
-;;   Copyright 2009-2015 Ivan Raikov.
+;;   Copyright 2009-2018 Ivan Raikov.
 ;;
 ;;   This program is free software: you can redistribute it and/or
 ;;   modify it under the terms of the GNU General Public License as
@@ -70,9 +70,9 @@
 	 byte-blob->f64vector 
 	 )
 
-	(import scheme chicken data-structures foreign )
+	(import scheme (chicken base) (chicken foreign) (chicken blob)
+                (chicken file posix) (chicken memory) srfi-1)
 
-	(require-extension srfi-1 lolevel posix)
 
 
 (define-record-type byte-blob

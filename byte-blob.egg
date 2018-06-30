@@ -1,0 +1,11 @@
+;; -*- Hen -*-
+
+((synopsis "Byte array utility procedures for blobs.")
+ (license "LGPL-3")
+ (category data)
+ (dependencies srfi-1 srfi-4)
+ (test-dependencies test)
+ (author "Ivan Raikov")
+ (components (extension byte-blob))
+ )
+

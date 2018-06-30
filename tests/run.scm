@@ -1,5 +1,5 @@
 
-(use byte-blob test posix srfi-4)
+(import (chicken file posix) byte-blob test srfi-4)
 
 
 (define a (byte-blob-cons 1 (byte-blob-cons 2 (byte-blob-empty))))
