@@ -1,4 +1,4 @@
-;; -*- Hen -*-
+;; -*- Scheme -*-
 
 ((synopsis "Byte array utility procedures for blobs.")
  (license "LGPL-3")
