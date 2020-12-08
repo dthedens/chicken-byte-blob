@@ -222,6 +222,12 @@
               (delete-file temp-path)
 	       
 	      )
+            ;; test case contributed by dthedens 
+            ;; Test for byte-blob->blob for non-zero offset
+            (test
+             (sprintf "byte-blob->blob for non-zero offset")
+             #${09}
+             (byte-blob->blob (byte-blob-drop c 2)))
 )
 
 	    

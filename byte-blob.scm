@@ -84,7 +84,13 @@
   )
 
 
-(define byte-blob->blob byte-blob-object)
+(define (byte-blob->blob b)
+  (if (zero? (byte-blob-offset b)) (byte-blob-object b)
+      (let* ((origblob (byte-blob-object b))
+	     (origlen  (byte-blob-length b))
+	     (newblob  (make-blob origlen)))
+	(move-memory! origblob newblob origlen (byte-blob-offset b) 0)
+	newblob)))
 
 (define (blob->byte-blob b)
   (and (blob? b) (make-byte-blob b 0 (blob-size b))))
