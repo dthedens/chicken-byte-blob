@@ -1,6 +1,6 @@
 # byte-blob
 
-{{byte-blob}} aims to provide a SRFI-1-inspired API for manipulating
+`byte-blob` aims to provide a SRFI-1-inspired API for manipulating
 byte vectors encoded as blobs. In addition it borrows inspiration from
 the Haskell bytestring library (http://hackage.haskell.org/package/bytestring-0.9.2.1/docs/Data-ByteString.html).
 
@@ -198,12 +198,12 @@ blobs).
 
 >
 > Based on ideas from the Haskell
-> [[http://www.cse.unsw.edu.au/~dons/fps.html|bytestring]] library.  
+> [[http://www.cse.unsw.edu.au/~dons/fps.html|bytestring]] library.
 > 
 > The code for `byte-blob-find` is based on code from the Haskell Text
 > library by Tom Harper and Bryan O'Sullivan.
 > 
->  Copyright 2009-2018 Ivan Raikov
+>  Copyright 2009-2020 Ivan Raikov, Dan Thedens.
 >
 >
 >  This program is free software: you can redistribute it and/or modify

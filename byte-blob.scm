@@ -1,7 +1,7 @@
 ;;
 ;;  Utility procedures for manipulating blobs as byte sequences.
 ;;
-;;   Copyright 2009-2018 Ivan Raikov.
+;;   Copyright 2009-2020 Ivan Raikov, Dan Thedens.
 ;;
 ;;   This program is free software: you can redistribute it and/or
 ;;   modify it under the terms of the GNU General Public License as
